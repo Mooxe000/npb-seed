@@ -1,0 +1,30 @@
+{
+  "name": "npb-seed",
+  "version": "0.0.0-pre",
+  "description": "A npb seed project.",
+  "author": ":FooTearth <footearth@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mooxe000/npb-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mooxe000/npb-seed/issues"
+  },
+  "homepage": "https://github.com/Mooxe000/npb-seed",
+  "Keywords": [
+    "npb",
+    "seed",
+    "example",
+    "coffee"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.10",
+    "bootstrap": "~3.3.2",
+    "angular-bootstrap": "~0.12.0",
+    "ui-router": "~0.2.13",
+    "restangular": "~1.4.0",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {}
+}
