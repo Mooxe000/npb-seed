@@ -28,12 +28,11 @@ bower:
       'dist/fonts/glyphicons-halflings-regular.svg'
       'dist/fonts/glyphicons-halflings-regular.ttf'
       'dist/fonts/glyphicons-halflings-regular.woff'
-      'dist/fonts/glyphicons-halflings-regular.woff2'
     ]
-    'angular-bootstrap': 'ui-bootstrap.js'
-    'ui-router': 'release/angular-ui-router.js'
-    restangular: 'dist/restangular.js'
-    lodash: 'dist/lodash.js'
+    'jquery': 'dist/jquery.js'
+    'angular-route': 'angular-route.js'
+    'angular-resource': 'angular-resource.js'
+    'angular-animate': 'angular-animate.js'
   devDependencies: []
 
 # NPM CONFIG
@@ -45,7 +44,18 @@ npm:
   devDependencies: [
     'coffee-script'
     'npb-coffee'
-    'gulp'
+    'lodash'
+    'del'
+    gulp: [
+      'gulp-filter'
+      'gulp-coffee'
+      'gulp-jade'
+      'gulp-stylus'
+      'gulp-tap'
+      'gulp-watch'
+      'browser-sync'
+      'run-sequence'
+    ]
   ]
 
 # NPB CONFIG
