@@ -1,0 +1,49 @@
+# PUBLIC CONFIG
+name: 'npb-seed'
+version: '0.0.0-pre'
+description: 'A npb seed project.'
+author: ':FooTearth <footearth@gmail.com>'
+# main: ''
+license: 'MIT'
+repository:
+  type: 'git'
+  url: 'https://github.com/Mooxe000/npb-seed.git'
+bugs:
+  url: 'https://github.com/Mooxe000/npb-seed/issues'
+homepage: 'https://github.com/Mooxe000/npb-seed'
+Keywords: [
+  'npb'
+  'seed'
+  'example'
+  'coffee'
+]
+
+# BOWER CONFIG
+bower:
+  dependencies: []
+  devDependencies: []
+
+# NPM CONFIG
+npm:
+  bin: {}
+  scripts:
+    test: ''
+  dependencies: []
+  devDependencies: [
+    'coffee-script'
+    'npb-coffee'
+    'gulp'
+  ]
+
+# NPB CONFIG
+npb:
+
+#  bower:
+#    root_allow: true
+  npm:
+    commander: 'npm' # default
+    # commander: 'cnpm'
+
+# -- build tools --
+#  build: 'gulp'  # default
+#  build: 'grunt'
