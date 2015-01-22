@@ -55,14 +55,16 @@ npm:
       'gulp-tap'
       'gulp-watch'
       'browser-sync'
-      'run-sequence'
       # dist
       'gulp-inline-angular-templates'
       'gulp-usemin'
+      'gulp-useref'
       'gulp-minify-html'
       'gulp-minify-css'
+      'gulp-csso'
       'gulp-uglify'
       'gulp-rev'
+      'gulp-rev-replace'
     ]
   ]
 

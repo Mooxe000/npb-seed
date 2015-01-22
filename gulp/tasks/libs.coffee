@@ -7,6 +7,8 @@ gulp = require 'gulp'
   extname
 } = require 'path'
 
+gulpFilter = require 'gulp-filter'
+
 libs_obj =
   base: 'bower_components'
   files:
@@ -38,29 +40,32 @@ getlibfiles = (libs) ->
 
   libsArr
 
-assetFilter = (libfiles) ->
-  result =
-    css: []
-    js: []
-    fonts: []
-  for filepath in libfiles
-    filename = basename filepath
-    ext_name = extname filename
-    if ext_name is '.css'
-      result.css.push filepath
-    else if ext_name is '.js'
-      result.js.push filepath
-    else if ext_name in ['.eot', '.svg', '.ttf', '.woff']
-      result.fonts.push filepath
-    else
-      echo filepath
-  result
+module.exports = (callback) ->
 
-module.exports = ->
-  libs = assetFilter getlibfiles libs_obj
-  gulp.src libs.css
-  .pipe gulp.dest 'build/styles/libs'
-  gulp.src libs.js
+  jsFilter = gulpFilter ['**/*.js']
+  cssFilter = gulpFilter ['**/*.css']
+  fontsFilter = gulpFilter [
+    '**/*.eot'
+    '**/*.svg'
+    '**/*.ttf'
+    '**/*.woff'
+  ]
+
+  gulp.src getlibfiles libs_obj
+
+  # js
+  .pipe jsFilter
   .pipe gulp.dest 'build/scripts/libs'
-  gulp.src libs.fonts
+  .pipe jsFilter.restore()
+
+  # css
+  .pipe cssFilter
+  .pipe gulp.dest 'build/styles/libs'
+  .pipe cssFilter.restore()
+
+  # fonts
+  .pipe fontsFilter
   .pipe gulp.dest 'build/styles/fonts'
+  .pipe fontsFilter.restore()
+
+  callback()

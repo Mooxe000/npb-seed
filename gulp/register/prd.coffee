@@ -1,14 +1,8 @@
-require 'shelljs/global'
+runSequence = require 'run-sequence'
 
 module.exports = ->
 
-  for cmd in [
-    'clean'
-    'libs'
-    'build'
-    'useref'
-    'dist_index'
-    'dist_other'
-    'dist_clean'
-  ]
-    exec "gulp #{cmd}"
+  runSequence 'clean'
+  , 'libs', 'build'
+  , 'useref'
+  , 'dist_index', 'dist_other', 'dist_clean'
