@@ -47,6 +47,7 @@ npm:
     'lodash'
     'del'
     gulp: [
+      # dev
       'gulp-filter'
       'gulp-coffee'
       'gulp-jade'
@@ -55,6 +56,13 @@ npm:
       'gulp-watch'
       'browser-sync'
       'run-sequence'
+      # dist
+      'gulp-inline-angular-templates'
+      'gulp-usemin'
+      'gulp-minify-html'
+      'gulp-minify-css'
+      'gulp-uglify'
+      'gulp-rev'
     ]
   ]
 

@@ -4,8 +4,6 @@ del = require 'del'
 
 module.exports = ->
   del [
-    'build'
-    'dist'
     '.tmp'
     'trash'
   ], (err, deletedFiles) ->

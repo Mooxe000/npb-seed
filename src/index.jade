@@ -6,9 +6,11 @@ ng-app='phonecatApp'
   head
     meta(charset='utf-8')
     title Share to teambition
+    // build:css styles/styles.css
     link(rel='stylesheet', href='./styles/libs/bootstrap.css', type="text/css")
     link(rel='stylesheet', href='./styles/style.css', type="text/css")
     link(rel='stylesheet', href='./styles/animations.css', type="text/css")
+    // endbuild
 
   body
 
@@ -17,6 +19,7 @@ ng-app='phonecatApp'
       ng-view=''
       )
 
+    // build:js scripts/app.js
     script(src='./scripts/libs/jquery.js')
     script(src='./scripts/libs/angular.js')
     script(src='./scripts/libs/angular-animate.js')
@@ -28,3 +31,4 @@ ng-app='phonecatApp'
     script(src='./scripts/filters.js')
     script(src='./scripts/services.js')
     script(src='./scripts/animations.js')
+    // endbuild

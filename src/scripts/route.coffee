@@ -9,11 +9,11 @@ angular
     $routeProvider
 
     .when '/phones',
-      templateUrl: './module/phone-list.html'
+      templateUrl: '/module/phone-list.html'
       controller: 'PhoneListCtrl'
 
     .when '/phones/:phoneId',
-      templateUrl: './module/phone-detail.html'
+      templateUrl: '/module/phone-detail.html'
       controller: 'PhoneDetailCtrl'
 
     .otherwise

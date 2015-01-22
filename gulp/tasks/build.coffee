@@ -18,10 +18,6 @@ module.exports = ->
 
   gulp.src 'src/**/*'
 
-  # reload for file changed
-#  .pipe watch src_path_arr, ->
-#    browserSync.reload()
-
   # jade
   .pipe jadeFilter
   .pipe jade
@@ -45,7 +41,3 @@ module.exports = ->
 
   # dest
   .pipe gulp.dest 'build'
-
-# reload for file changed
-#  .pipe watch src_path_arr, ->
-#    browserSync.reload()

@@ -19,7 +19,7 @@
     "coffee"
   ],
   "dependencies": {
-    "angularjs": "~1.3.10",
+    "angularjs": "*",
     "bootstrap": "~3.3.2",
     "jquery": "~2.1.3",
     "angular-route": "~1.3.10",
