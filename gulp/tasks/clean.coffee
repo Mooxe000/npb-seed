@@ -1,8 +1,9 @@
 echo = console.log
 {error} = console
 del = require 'del'
+{exit} = process
 
-module.exports = ->
+module.exports = (callback) ->
   del [
     'build'
     'dist'
@@ -11,10 +12,11 @@ module.exports = ->
   ], (err, deletedFiles) ->
     if err
       error err
-      return
+      exit 1
     else if deletedFiles.length > 0
       echo """
       Files deleted:
       #{deletedFiles.join '\n'}
       """
-    else return
+      callback()
+    else callback()
