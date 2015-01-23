@@ -2,5 +2,8 @@ runSequence = require 'run-sequence'
 
 module.exports = ->
 
-  runSequence 'prd'
+  runSequence 'clean'
+  , 'libs', 'build'
+  , 'useref'
+  , 'dist_index', 'dist_other', 'dist_clean'
   , 'ghpages'
